@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R & Bioconductor in Drug Discoveryvery",
+    "section": "",
+    "text": "Preface\nDrug discovery is a complex and costly process, requiring innovative solutions to overcome challenges such as high expenses, long timelines, and the intricacies of biological systems. Computational tools like R and Python have become indispensable for addressing these hurdles, providing powerful methods to analyze and interpret vast amounts of biomedical data.\nBoth R and Python have increasingly adapted to one another, with Python tools incorporating R’s philosophies and some R packages now having Python counterparts. This cross-adaptation enhances flexibility and enables seamless integration, allowing researchers to leverage the strengths of both languages in drug discovery.\nIn this guide, we’ll explore how R and Bioconductor play a pivotal role in drug discovery. From single-cell RNA sequencing to multiomics and spatial transcriptomics, we’ll showcase the tools and techniques used to analyze complex biological data. By examining real-world case studies and relevant packages, we aim to demonstrate how computational tools are driving innovation in pharmaceutical research and accelerating the development of new therapies.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Drug discovery has evolved over centuries, from ancient remedies discovered by chance to modern research that identifies molecular targets linked to disease. Today, the process begins with basic research identifying a therapeutic target (often a protein) associated with a disease. Researchers then search for therapeutic agents that modify the target to restore health. However, finding the right target is challenging, as drugs often interact with unintended targets, sometimes with unknown effects.\nThe process progresses through a preclinical phase (testing in animal models) followed by clinical trials in humans to establish drug safety and efficacy. If successful, regulatory agencies approve the drug, and it’s released to the market. Post-approval, pharmacovigilance studies (phase 4) monitor long-term side effects.\nDrug discovery is a lengthy and expensive process—costing about $2.8 billion and taking 12–15 years to complete. It generates vast amounts of data, often through high-throughput technologies, which can be analyzed with computational tools to speed up the process, reduce errors, and gain valuable insights.\nThis guide explores how R and Bioconductor help analyze complex data from omics technologies—genomics, transcriptomics, proteomics, and metabolomics—enabling researchers to uncover new drug targets and accelerate drug discovery as shown in this figure below from Singh et al. (2023).\n\n\n\nA simplified overview of the drug discovery and development process, which varies depending on the disease mechanisms and therapeutic agents\n\n\n\n\n\n\nSingh, Natesh, Philippe Vayer, Shivalika Tanwar, Jean-Luc Poyet, Katya Tsaioun, and Bruno O Villoutreix. 2023. “Drug Discovery and Development: Introduction to the General Public and Patient Groups.” Frontiers in Drug Discovery 3: 1201419.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "omics_drug_discovery.html",
+    "href": "omics_drug_discovery.html",
+    "title": "Omics Technologies and Drug Discovery",
+    "section": "",
+    "text": "Omics technologies—such as genomics, transcriptomics, proteomics, and metabolomics—are revolutionizing drug discovery by enabling a more comprehensive and data-driven approach to understanding diseases. Here’s how each of these fields contributes to drug discovery\n\nGenomics\nRole in Drug Discovery: Genomics studies the entire genome, including genes, mutations, and regulatory elements. In drug discovery, genomics helps identify genetic variations associated with diseases, enabling the discovery of new drug targets (e.g., proteins or pathways altered in disease). How Omics Help: By sequencing genomes and identifying mutations, researchers can pinpoint genes responsible for diseases and design drugs that target these genes, potentially leading to precision medicine.\nTranscriptomics\nRole in Drug Discovery: Transcriptomics analyzes gene expression, i.e., which genes are turned on or off in a cell. This is crucial for identifying biomarkers and understanding how genes contribute to disease states. How Omics Help: By using technologies like RNA-sequencing (RNA-seq), researchers can observe the changes in gene expression patterns in response to drug treatments, helping identify the most promising drug candidates and biomarkers for disease monitoring.\nProteomics\nRole in Drug Discovery: Proteomics focuses on proteins, their functions, and their interactions within a cell. Since proteins are the primary targets of most drugs, understanding the proteome can lead to better drug design. How Omics Help: Identifying protein markers or changes in protein function can help researchers design drugs that modify these proteins, improving treatment efficacy or targeting specific disease-related pathways.\nMetabolomics\nRole in Drug Discovery: Metabolomics studies the metabolites, which are the small molecules involved in metabolism. Since these metabolites reflect the biological activity of cells, they provide insights into cellular function and disease. How Omics Help: Analyzing metabolic changes can reveal how diseases alter metabolism and how drugs impact these pathways, facilitating the discovery of drugs that target metabolic disorders or influence disease progression.\n\nIntegration of Omics in Drug Discovery\nOmics technologies often work together to give a holistic view of a disease and its treatment. For example, combining genomics and transcriptomics can identify how genetic variations lead to changes in gene expression, which can be linked to the malfunctioning of certain proteins (proteomics). This comprehensive understanding allows researchers to develop drugs that can target multiple levels of biological processes.\nOverview of omics data types and their functions in drug discovery, along with relevant databases supporting pharmaceutical research and development (adapted from @).\n\n\n\n\n\n\n\n\nOmics\nFunction\nDatabases\n\n\n\n\nGenomics\nUnderstanding pathogenesis\nGWAS Catalog\n\n\n\nGenetic association studies\nGWAS central\n\n\n\nIdentification of disease genes\ndbGaP\n\n\n\nDiscovery of putative drug targets\nPharmGKB\n\n\n\nPatient-centered efficacy and toxicity assessment of drugs/targets\n\n\n\n\nPatient stratification\n\n\n\nTranscriptomics\nDisease mechanisms\nDrugMatrix\n\n\n\nMode of action of compounds\nTG-GATE\n\n\n\nMoving from disease genes to drug targets\nLINCS 1000\n\n\n\nIdentification/evaluation of drug target candidates\nExpression Atlas\n\n\n\nEarly prediction of adverse drug target effects\nGEO repository\n\n\n\n\nArrayExpress\n\n\nProteomics\nPost-translational process\nPRIDE Archive\n\n\n\nProtein–protein network interaction\nPeptide Atlas\n\n\n\nDrug target efficacy and safety evaluation at protein level\nProteomicsDB\n\n\n\n\nHuman Proteome Map\n\n\n\nProtein toxicology\nHuman Proteome Atlas\n\n\nMetabolomics\nNovel DTD\nHuman Metabolome\n\n\n\nDrug target efficacy and safety evaluation at metabolomic level\nMadison Metabolomics\n\n\n\nMetabolic toxicity\nGolm Metabolome Database",
+    "crumbs": [
+      "Omics Technologies and Drug Discovery"
+    ]
+  },
+  {
+    "objectID": "R_in_omics.html",
+    "href": "R_in_omics.html",
+    "title": "R and Bioconductor in Omics: Comprehensive Support from Harmonization to Reporting",
+    "section": "",
+    "text": "1. Data Harmonization\nR and Bioconductor are indispensable for navigating the complexities of omics data, offering robust support at every step—from data harmonization to custom visualization and final report compilation.\nOpen-source databases like GWAS Catalog, GEO, and PRIDE Archive provide vast reservoirs of omics data. However, integrating data from these diverse sources requires harmonization to ensure consistency and compatibility.",
+    "crumbs": [
+      "R and Bioconductor in Omics\\: Comprehensive Support from Harmonization to Reporting"
+    ]
+  },
+  {
+    "objectID": "R_in_omics.html#data-harmonization",
+    "href": "R_in_omics.html#data-harmonization",
+    "title": "R and Bioconductor in Omics: Comprehensive Support from Harmonization to Reporting",
+    "section": "",
+    "text": "Annotation Packages\n\nbiomaRt: Efficient retrieval of biomolecular annotations.\nAnnotationHub: Centralized resource for annotation datasets.\nOrganismDbi: Species-specific annotations.\n\n\n\nHarmonization Tools\n\nGenomicRanges: Aligning and harmonizing genomic coordinates.\nIRanges: Handling interval data across datasets.\nBiocParallel: Streamlining multi-core processing for harmonization tasks.",
+    "crumbs": [
+      "R and Bioconductor in Omics\\: Comprehensive Support from Harmonization to Reporting"
+    ]
+  },
+  {
+    "objectID": "R_in_omics.html#cross-omics-analysis",
+    "href": "R_in_omics.html#cross-omics-analysis",
+    "title": "R and Bioconductor in Omics: Comprehensive Support from Harmonization to Reporting",
+    "section": "2. Cross-Omics Analysis",
+    "text": "2. Cross-Omics Analysis\nOnce harmonized, the next step is analyzing the different omics data types to uncover meaningful insights.\n\nStatistical Frameworks\n\nMeta-analysis:\n\nmetaRNASeq: Meta-analysis for RNA-seq studies.\nmetafor: General-purpose meta-analysis framework.\n\nIntegration:\n\nmixOmics and MOFA2: Multi-omics integration for holistic disease analysis.\n\n\n\n\nDiverse Applications\n\nMicrobiome diversity analysis with phyloseq to understand associations with phenotypes.\nImmune receptor sequencing data interpretation using Immunarch.",
+    "crumbs": [
+      "R and Bioconductor in Omics\\: Comprehensive Support from Harmonization to Reporting"
+    ]
+  },
+  {
+    "objectID": "R_in_omics.html#tailored-visualizations",
+    "href": "R_in_omics.html#tailored-visualizations",
+    "title": "R and Bioconductor in Omics: Comprehensive Support from Harmonization to Reporting",
+    "section": "3. Tailored Visualizations",
+    "text": "3. Tailored Visualizations\nVisualizing complex results is critical for communicating findings effectively. R and Bioconductor provide unmatched tools for creating tailored, publication-ready graphics.\n\nCustom Visualization Tools\n\nggplot2: General-purpose visualizations.\nComplexHeatmap: Multi-dimensional data representation.\nGviz: Genomic data visualization.\n\n\n\nEffect Size Representations\n\nForest plots with meta and metafor.\nVolcano plots and heatmaps for biomarker discovery.",
+    "crumbs": [
+      "R and Bioconductor in Omics\\: Comprehensive Support from Harmonization to Reporting"
+    ]
+  },
+  {
+    "objectID": "R_in_omics.html#comprehensive-reporting",
+    "href": "R_in_omics.html#comprehensive-reporting",
+    "title": "R and Bioconductor in Omics: Comprehensive Support from Harmonization to Reporting",
+    "section": "4. Comprehensive Reporting",
+    "text": "4. Comprehensive Reporting\nR’s capabilities extend beyond analysis and visualization to the creation of professional reports.\n\nReport Compilation\n\nR Markdown: Seamless integration of code, results, and narratives.\nknitr and bookdown: Automate reproducible workflows and produce high-quality books or documents.\nQuarto: A modern framework for creating HTML, PDF, and other formats with enhanced styling.",
+    "crumbs": [
+      "R and Bioconductor in Omics\\: Comprehensive Support from Harmonization to Reporting"
+    ]
+  },
+  {
+    "objectID": "R_in_omics.html#workflow-excellence",
+    "href": "R_in_omics.html#workflow-excellence",
+    "title": "R and Bioconductor in Omics: Comprehensive Support from Harmonization to Reporting",
+    "section": "5. Workflow Excellence",
+    "text": "5. Workflow Excellence\nBioconductor provides comprehensive workflows for all major omics types, guiding users from raw, machine-generated output files to polished reports:\n\nGenomics: Starting with FASTQ/BAM files, workflows include alignment, variant calling, and visualization.\nTranscriptomics: Covering raw RNA-seq data processing to differential expression analysis.\nProteomics and Metabolomics: Tailored pipelines for mass spectrometry data interpretation and pathway enrichment.",
+    "crumbs": [
+      "R and Bioconductor in Omics\\: Comprehensive Support from Harmonization to Reporting"
+    ]
+  },
+  {
+    "objectID": "R_in_omics.html#why-r-and-bioconductor",
+    "href": "R_in_omics.html#why-r-and-bioconductor",
+    "title": "R and Bioconductor in Omics: Comprehensive Support from Harmonization to Reporting",
+    "section": "Why R and Bioconductor?",
+    "text": "Why R and Bioconductor?\nR and Bioconductor stand out as the only ecosystem offering an end-to-end solution for omics research: 1. Harmonization and annotation of open-source datasets. 2. Advanced statistical methods tailored for omics. 3. Tools for microbiome, immune receptor, and multi-omics analysis. 4. Comprehensive and customizable visualization. 5. Reproducible report generation with R Markdown and Quarto.\nWhether you’re identifying biomarkers, narrowing down drug targets, or compiling a professional report, R and Bioconductor empower researchers to achieve their goals seamlessly and efficiently.",
+    "crumbs": [
+      "R and Bioconductor in Omics\\: Comprehensive Support from Harmonization to Reporting"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Summary and Future Directions",
+    "section": "",
+    "text": "The Power of R and Bioconductor in Drug Discovery\nThis guide explored how R and Bioconductor empower researchers to tackle key challenges in drug discovery. By providing tools for omics data integration, analysis, and visualization, they help transform complex biological data into actionable insights.",
+    "crumbs": [
+      "Summary and Future Directions"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Singh, Natesh, Philippe Vayer, Shivalika Tanwar, Jean-Luc Poyet, Katya\nTsaioun, and Bruno O Villoutreix. 2023. “Drug Discovery and\nDevelopment: Introduction to the General Public and Patient\nGroups.” Frontiers in Drug Discovery 3: 1201419.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "summary.html#key-takeaways",
+    "href": "summary.html#key-takeaways",
+    "title": "Summary and Future Directions",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nEnd-to-End Workflows: From data preprocessing to final report generation.\n\nCustomizability: Tailored solutions for specific drug discovery projects.\n\nReproducibility: Transparent and collaborative workflows.\n\nEmerging Frontiers: Applications in precision medicine, multiomics, and AI-driven drug discovery.",
+    "crumbs": [
+      "Summary and Future Directions"
+    ]
+  },
+  {
+    "objectID": "summary.html#the-future-of-drug-discovery",
+    "href": "summary.html#the-future-of-drug-discovery",
+    "title": "Summary and Future Directions",
+    "section": "The Future of Drug Discovery",
+    "text": "The Future of Drug Discovery\nAs data-driven approaches expand, R and Bioconductor will remain at the forefront, enabling innovation and accelerating discoveries. The journey from data to impact is evolving—and with R and Bioconductor, you’re equipped to lead the way.",
+    "crumbs": [
+      "Summary and Future Directions"
+    ]
+  }
+]

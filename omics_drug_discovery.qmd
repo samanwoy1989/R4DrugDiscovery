@@ -1,0 +1,52 @@
+# Omics Technologies and Drug Discovery {.unnumbered}
+
+Omics technologies—such as genomics, transcriptomics, proteomics, and metabolomics—are revolutionizing drug discovery by enabling a more comprehensive and data-driven approach to understanding diseases. Here's how each of these fields contributes to drug discovery
+
+1. Genomics
+
+    Role in Drug Discovery: Genomics studies the entire genome, including genes, mutations, and regulatory elements. In drug discovery, genomics helps identify genetic variations associated with diseases, enabling the discovery of new drug targets (e.g., proteins or pathways altered in disease).
+    How Omics Help: By sequencing genomes and identifying mutations, researchers can pinpoint genes responsible for diseases and design drugs that target these genes, potentially leading to precision medicine.
+
+2. Transcriptomics
+
+    Role in Drug Discovery: Transcriptomics analyzes gene expression, i.e., which genes are turned on or off in a cell. This is crucial for identifying biomarkers and understanding how genes contribute to disease states.
+    How Omics Help: By using technologies like RNA-sequencing (RNA-seq), researchers can observe the changes in gene expression patterns in response to drug treatments, helping identify the most promising drug candidates and biomarkers for disease monitoring.
+
+3. Proteomics
+
+    Role in Drug Discovery: Proteomics focuses on proteins, their functions, and their interactions within a cell. Since proteins are the primary targets of most drugs, understanding the proteome can lead to better drug design.
+    How Omics Help: Identifying protein markers or changes in protein function can help researchers design drugs that modify these proteins, improving treatment efficacy or targeting specific disease-related pathways.
+
+4. Metabolomics
+
+    Role in Drug Discovery: Metabolomics studies the metabolites, which are the small molecules involved in metabolism. Since these metabolites reflect the biological activity of cells, they provide insights into cellular function and disease.
+    How Omics Help: Analyzing metabolic changes can reveal how diseases alter metabolism and how drugs impact these pathways, facilitating the discovery of drugs that target metabolic disorders or influence disease progression.
+
+Integration of Omics in Drug Discovery
+
+Omics technologies often work together to give a holistic view of a disease and its treatment. For example, combining genomics and transcriptomics can identify how genetic variations lead to changes in gene expression, which can be linked to the malfunctioning of certain proteins (proteomics). This comprehensive understanding allows researchers to develop drugs that can target multiple levels of biological processes.
+
+Overview of omics data types and their functions in drug discovery, along with relevant databases supporting pharmaceutical research and development (adapted from @).
+
+| Omics 	| **Function** 	| **Databases** 	|
+|---	|---	|---	|
+| **Genomics** 	| Understanding pathogenesis 	| GWAS Catalog 	|
+|  	| Genetic association studies 	| GWAS central 	|
+|  	| Identification of disease genes 	| dbGaP 	|
+|  	| Discovery of putative drug targets 	| PharmGKB 	|
+|  	| Patient-centered efficacy and toxicity assessment of drugs/targets 	|  	|
+|  	| Patient stratification 	|  	|
+| **Transcriptomics** 	| Disease mechanisms 	| DrugMatrix 	|
+|  	| Mode of action of compounds 	| TG-GATE 	|
+|  	| Moving from disease genes to drug targets 	| LINCS 1000 	|
+|  	| Identification/evaluation of drug target candidates 	| Expression Atlas 	|
+|  	| Early prediction of adverse drug target effects 	| GEO repository 	|
+|  	|  	| ArrayExpress 	|
+| **Proteomics** 	| Post-translational process 	| PRIDE Archive 	|
+|  	| Protein–protein network interaction 	| Peptide Atlas 	|
+|  	| Drug target efficacy and safety evaluation at protein level 	| ProteomicsDB 	|
+|  	|  	| Human Proteome Map 	|
+|  	| Protein toxicology 	| Human Proteome Atlas 	|
+| **Metabolomics** 	| Novel DTD 	| Human Metabolome 	|
+|  	| Drug target efficacy and safety evaluation at metabolomic level 	| Madison Metabolomics 	|
+|  	| Metabolic toxicity 	| Golm Metabolome Database 	|

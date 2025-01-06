@@ -1,0 +1,11 @@
+# Introduction {.unnumbered}
+
+Drug discovery has evolved over centuries, from ancient remedies discovered by chance to modern research that identifies molecular targets linked to disease. Today, the process **begins with basic research identifying a therapeutic target (often a protein) associated with a disease. Researchers then search for therapeutic agents that modify the target to restore health.** However, finding the right target is challenging, as drugs often interact with unintended targets, sometimes with unknown effects.
+
+The process progresses through a **preclinical phase (testing in animal models) followed by clinical trials in humans to establish drug safety and efficacy. If successful, regulatory agencies approve the drug, and it’s released to the market. Post-approval, pharmacovigilance studies (phase 4)** monitor long-term side effects.
+
+Drug discovery is a lengthy and expensive process—costing about **\$2.8 billion and taking 12–15 years** to complete. It generates vast amounts of data, often through high-throughput technologies, which can be analyzed with computational tools to speed up the process, reduce errors, and gain valuable insights.
+
+This guide explores how **R and Bioconductor help analyze complex data from omics technologies—genomics, transcriptomics, proteomics, and metabolomics—enabling** researchers to uncover new drug targets and accelerate drug discovery as shown in this figure below from @singh2023drug.
+
+![A simplified overview of the drug discovery and development process, which varies depending on the disease mechanisms and therapeutic agents](./drug%20discovery%20phases.jpg)

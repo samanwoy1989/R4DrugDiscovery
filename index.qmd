@@ -1,0 +1,8 @@
+# Preface {.unnumbered}
+
+Drug discovery is a complex and costly process, requiring innovative solutions to overcome challenges such as high expenses, long timelines, and the intricacies of biological systems. Computational tools like R and Python have become indispensable for addressing these hurdles, providing powerful methods to analyze and interpret vast amounts of biomedical data.
+
+Both R and Python have increasingly adapted to one another, with Python tools incorporating R’s philosophies and some R packages now having Python counterparts. This cross-adaptation enhances flexibility and enables seamless integration, allowing researchers to leverage the strengths of both languages in drug discovery.
+
+In this guide, we’ll explore how R and Bioconductor play a pivotal role in drug discovery. From single-cell RNA sequencing to multiomics and spatial transcriptomics, we’ll showcase the tools and techniques used to analyze complex biological data. By examining real-world case studies and relevant packages, we aim to demonstrate how computational tools are driving innovation in pharmaceutical research and accelerating the development of new therapies.
+

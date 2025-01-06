@@ -1,0 +1,20 @@
+{
+  "index.qmd": {
+    "index.html": "803890ef"
+  },
+  "intro.qmd": {
+    "intro.html": "b55f4601"
+  },
+  "summary.qmd": {
+    "summary.html": "83911c0e"
+  },
+  "references.qmd": {
+    "references.html": "b10a9219"
+  },
+  "omics_drug_discovery.qmd": {
+    "omics_drug_discovery.html": "97f936ac"
+  },
+  "R_in_omics.qmd": {
+    "R_in_omics.html": "5d209545"
+  }
+}

@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "R & Bioconductor in Drug Discoveryvery"
+  author: "SM"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - omics_drug_discovery.qmd
+    - R_in_omics.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+
